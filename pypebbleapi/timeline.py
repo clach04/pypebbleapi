@@ -6,7 +6,7 @@ from cerberus import Validator as _Validator
 
 from pypebbleapi import __version__, schemas
 
-PEBBLE_API_ROOT = 'https://timeline-api.getpebble.com'
+PEBBLE_API_ROOT = 'https://timeline-api.rebble.io'
 """ Default Pebble API root URL """
 
 

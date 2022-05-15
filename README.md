@@ -3,7 +3,10 @@ pypebbleapi
 [![Build Status](https://travis-ci.org/youtux/pypebbleapi.svg?branch=master)](https://travis-ci.org/youtux/pypebbleapi)
 [![Documentation Status](https://readthedocs.org/projects/pypebbleapi/badge/?version=latest)](http://pypebbleapi.readthedocs.org/en/latest)
 
-[Pebble Timeline](http://developer.getpebble.com/guides/timeline/) APIs for python.
+[Rebble.io / Pebble Timeline](https://developer.rebble.io/developer.pebble.com/guides/pebble-timeline/index.html) APIs for python.
+
+This is a fork of Alessio Bogon's https://github.com/youtux/pypebbleapi with support for Rebble servers to send pins to the Pebble Timeline for the Pebble smartwatch.
+It has a different version number so as to avoid confusion with the (as of 2022-05) archived repo. Thanks to the Rebble.io maintainers/service timeline support is available for Pebble users.
 
 This is a library to ease the access to the Pebble Timeline and validate pins.
 It supports Python 2.7, 3.3 and 3.4.

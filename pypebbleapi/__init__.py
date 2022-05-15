@@ -2,7 +2,7 @@
 TODO: doc for init
 """
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 __author__ = 'Alessio Bogon'
 __email__ = 'youtux@example.com'

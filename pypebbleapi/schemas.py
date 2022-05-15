@@ -234,8 +234,17 @@ reminder = {
 
 action = {
     'title': {'type': 'string'},
-    'type': {'type': 'string', 'allowed': ['openWatchApp']},
-    'launchCode': {'type': 'integer'}
+    'type': {'type': 'string', 'allowed': ['openWatchApp', 'http']},
+    'launchCode': {'type': 'integer', 'required': False},
+    'url': {'type': 'string', 'required': False},
+    'method': {'type': 'string', 'allowed': ['GET', 'POST', 'PUT', 'DELETE'], 'required': False},
+    'headers': {'type': 'dict', 'required': False},
+    'bodyText': {'type': 'string', 'required': False},
+    'bodyJSON': {'type': 'dict', 'required': False},
+    'successText': {'type': 'string', 'required': False},
+    'successIcon': {'type': 'string', 'allowed': icons, 'required': False},
+    'failureText': {'type': 'string', 'required': False},
+    'failureIcon': {'type': 'string', 'required': False}
 }
 
 pin = {

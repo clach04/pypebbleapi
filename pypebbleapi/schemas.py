@@ -141,7 +141,6 @@ icons = {icon_name_to_path(icon) for icon in {
 
 basic_layout = {
     'type': {'required': True, 'type': 'string', 'allowed': layout_types},
-    'type': {'required': True, 'type': 'string'},
     'title': {'type': 'string'},
     'subtitle': {'type': 'string'},
     'body': {'type': 'string'},

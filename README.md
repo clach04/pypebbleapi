@@ -89,3 +89,20 @@ except DocumentError as e:
     print(e.errors)  # e.errors contain a dictionary of the fields that failed the validation
 ```
 
+Dev Setup
+---------
+
+    git clone https://github.com/clach04/pypebbleapi
+    pypebbleapi
+    pip install -e .
+
+Working demos:
+
+  * utc_pin_demo.py - Python 3 demo
+
+Steps:
+
+1. Install https://apps.rebble.io/en_US/application/5d9ac26dc393f54d6b5f5445 (source available from https://github.com/Willow-Systems/pebble-generate-token/)
+2. Generate token on Pebble, copy token from phone via app settings
+3. Set operating system environment variable `USER_TIMELINE_TOKEN` to token value, e.g. `set USER_TIMELINE_TOKEN=token` or `export USER_TIMELINE_TOKEN=token`
+4. Run demo; `python utc_pin_demo.py`

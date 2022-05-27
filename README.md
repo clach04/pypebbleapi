@@ -19,6 +19,7 @@ It supports Python 2.7, 3.3 and 3.4.
   * [Dev Setup](#dev-setup)
     + [Working demos](#working-demos)
   * [Future Ideas](#future-ideas)
+  * [Notes](#notes)
   * [Resources](#resources)
 
 Update
@@ -128,6 +129,14 @@ TODO ideas:
   * add datetime support to the schema along with coercion so that (local) date and datetime could be automaticall coerced into a string rather than requiring a string
   * hard fork (and rename to py-pebble-timeline) to use GitHub issue tracking
   * Consider https://github.com/samuelcolvin/pydantic support instead of cerberus
+
+Notes
+-----
+
+  * date only string format, old docs indicate date only with no time componentn is sypported - this is not true with Rebble.io servers both of the below appear to be incorrect (or possibly only true for the original Pebble servers?):
+      * https://developer.rebble.io/developer.pebble.com/guides/pebble-timeline/timeline-libraries/index.html#pypebbleapi
+      * https://github.com/youtux/pypebbleapi
+  * shortTitle not supported alone (NOTE this library does not current implement support for shortTitle), https://developer.rebble.io/developer.pebble.com/guides/pebble-timeline/timeline-public/index.html#create-a-pin indicates a title is not needed but a shortTitle alone does not work
 
 Resources
 ---------

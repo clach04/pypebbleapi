@@ -3,6 +3,7 @@
 NOTE assumes computer time is correct and has correct locale/regional setting.
 
 Under Microsoft Windows; Control Panel\Clock and Region - the time zone setting
+Under Linux; check `date +"%Z %z"` and/or `timedatectl |grep 'Time zone'`
 """
 # Python 3.x only due to use of:
 #  * datetime.isoformat(timespec='milliseconds') - timespec not supported in Python 2.x datetime

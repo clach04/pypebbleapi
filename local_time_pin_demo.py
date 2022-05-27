@@ -1,6 +1,12 @@
-"""UTC time demo that uploads a pin. Also see `local_time_pin_demo.py` which is timezone aware
+"""Locale time demo that uploads a pin in the same way `utc_pin_demo.py` does but local instead of UTC
+
+NOTE assumes computer time is correct and has correct locale/regional setting.
+
+Under Microsoft Windows; Control Panel\Clock and Region - the time zone setting
 """
-# Python 3.x only due to use of datetime.isoformat(timespec='milliseconds') - timespec not supported in Python 2.x datetime
+# Python 3.x only due to use of:
+#  * datetime.isoformat(timespec='milliseconds') - timespec not supported in Python 2.x datetime
+#  * datetime.timezone - Python 2 has third-party libs, example; `from dateutil import tz`  # https://github.com/dateutil/dateutil
 import datetime
 import json
 import os
@@ -32,15 +38,24 @@ print('utc_now')
 print(utc_now)
 print(datetime2utc_isoformat(utc_now))
 
-pin_datetime_as_utc = utc_now + (60 * one_min)
+local_now = datetime.datetime.now()
+print('local_now')
+print(local_now)
+print(local_now.astimezone(datetime.timezone.utc))
+print(local_now.astimezone(datetime.timezone.utc).isoformat(timespec='milliseconds'))
 
+
+pin_datetime = local_now + (60 * one_min)
+pin_datetime_as_utc = pin_datetime.astimezone(datetime.timezone.utc)
+
+# basically the same pin as in the utc_pin_demo.py demo, but using local time
 my_pin = dict(
     id=datetime2utc_isoformat(pin_datetime_as_utc),
     time=datetime2utc_isoformat(pin_datetime_as_utc),
     duration=60,  # 60 mins (one hour)
     layout=dict(
         type="genericPin",
-        title="MyPin",
+        title="MyPin " + pin_datetime.isoformat(),
         tinyIcon="system://images/NOTIFICATION_FLAG",
     ),
     reminders=[

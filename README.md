@@ -18,6 +18,7 @@ It supports Python 2.7, 3.3 and 3.4.
   * [Error handling](#error-handling)
   * [Dev Setup](#dev-setup)
     + [Working demos](#working-demos)
+  * [Future Ideas](#future-ideas)
   * [Resources](#resources)
 
 Update
@@ -117,6 +118,16 @@ Steps:
 2. Generate token on Pebble, copy token from phone via app settings
 3. Set operating system environment variable `USER_TIMELINE_TOKEN` to token value, e.g. `set USER_TIMELINE_TOKEN=token` or `export USER_TIMELINE_TOKEN=token`
 4. Run demo; `python utc_pin_demo.py`
+
+Future Ideas
+------------
+
+TODO ideas:
+
+  * take `datetime2utc_isoformat()` from demos and put into library
+  * add datetime support to the schema along with coercion so that (local) date and datetime could be automaticall coerced into a string rather than requiring a string
+  * hard fork (and rename to py-pebble-timeline) to use GitHub issue tracking
+  * Consider https://github.com/samuelcolvin/pydantic support instead of cerberus
 
 Resources
 ---------

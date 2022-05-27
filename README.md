@@ -27,7 +27,7 @@ Just like you install any package:
 Usage
 -----
 
-Here's an example (note for working example see "Working demos" section):
+Here's an example (note for working example see [Working demos](#working-demos) section):
 ```python
 from pypebbleapi import Timeline
 import datetime

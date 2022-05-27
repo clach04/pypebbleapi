@@ -13,7 +13,7 @@ import json
 import os
 import sys
 
-from pypebbleapi import Timeline  # https://github.com/clach04/pypebbleapi
+from pypebbleapi import schemas, Timeline  # https://github.com/clach04/pypebbleapi
 
 
 def datetime2utc_isoformat(in_datetime):
@@ -44,12 +44,12 @@ pin_datetime_as_utc = pin_datetime.astimezone(datetime.timezone.utc)
 my_pin = dict(
     id=datetime2utc_isoformat(pin_datetime_as_utc),
     time=datetime2utc_isoformat(pin_datetime_as_utc),
-    "duration"=60 * 24,  # all day
-    "layout": {
-        "type": "calendarPin",
-        "title": "My all day test pin local midnight",
-        "tinyIcon": schemas.icon_name_to_path('TIMELINE_CALENDAR')  # "system://images/TIMELINE_CALENDAR"
-    }
+    duration=60 * 24,  # all day
+    layout=dict(
+        type="calendarPin",
+        title="My all day test pin local midnight",
+        tinyIcon=schemas.icon_name_to_path('TIMELINE_CALENDAR')  # "system://images/TIMELINE_CALENDAR"
+    )
 )
 print(json.dumps(my_pin, indent=4))
 

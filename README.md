@@ -100,6 +100,7 @@ Working demos:
 
   * utc_pin_demo.py - Python 3 demo (could be made to work with Python 2 with very little effort)
   * local_time_pin_demo.py - Python 3.6+ demo (could be made to work with Python 2 with third party library dateutil)
+  * day_pin_demo.py - Python 3.6+ demo (could be made to work with Python 2 with third party library dateutil)
 
 Steps:
 

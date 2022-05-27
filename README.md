@@ -136,7 +136,7 @@ Notes
 
   * time of pin must not be more than two days in the past, or a year in the future. TODO add to validation checks
       * see `time_valid()` https://github.com/pebble-dev/rebble-timeline-sync/blob/master/timeline_sync/utils.py#L72
-  * date only string format, old docs indicate date only with no time componentn is sypported - this is not true with Rebble.io servers both of the below appear to be incorrect (or possibly only true for the original Pebble servers?):
+  * date only string format, old docs indicate date only with no time components is supported - this is not true with Rebble.io servers both of the below appear to be incorrect (or possibly only true for the original Pebble servers?):
       * https://developer.rebble.io/developer.pebble.com/guides/pebble-timeline/timeline-libraries/index.html#pypebbleapi
       * https://github.com/youtux/pypebbleapi
   * shortTitle not supported alone (NOTE this library does not current implement support for shortTitle), https://developer.rebble.io/developer.pebble.com/guides/pebble-timeline/timeline-public/index.html#create-a-pin indicates a title is not needed but a shortTitle alone does not work

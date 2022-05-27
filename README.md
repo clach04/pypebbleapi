@@ -27,7 +27,7 @@ Just like you install any package:
 Usage
 -----
 
-Here's an example:
+Here's an example (note for working example see "Working demos" section):
 ```python
 from pypebbleapi import Timeline
 import datetime
@@ -97,7 +97,7 @@ Dev Setup
     pypebbleapi
     pip install -e .
 
-Working demos:
+### Working demos
 
   * utc_pin_demo.py - Python 3 demo (could be made to work with Python 2 with very little effort)
   * local_time_pin_demo.py - Python 3.6+ demo (could be made to work with Python 2 with third party library dateutil)

@@ -6,7 +6,7 @@ pypebbleapi
 [Rebble.io / Pebble Timeline](https://developer.rebble.io/developer.pebble.com/guides/pebble-timeline/index.html) APIs for python.
 
 This is a fork of Alessio Bogon's https://github.com/youtux/pypebbleapi with support for Rebble servers to send pins to the Pebble Timeline for the Pebble smartwatch.
-It has a different version number so as to avoid confusion with the (as of 2022-05) archived repo. Thanks to the Rebble.io maintainers/service timeline support is available for Pebble users.
+It has a different version number so as to avoid confusion with the (as of 2022-05) archived repo. Thanks to the Rebble.io maintainers/service timeline support is available for Pebble users! :)
 
 This is a library to ease the access to the Pebble Timeline and validate pins.
 It supports Python 2.7, 3.3 and 3.4.
@@ -37,7 +37,7 @@ timeline = Timeline(
 
 my_pin = dict(
     id='123',
-    time=datetime.date.today().isoformat(),
+    time=datetime.date.today().isoformat(),  # !! This should be a string in the form; "2022-05-25T00:00:00.000Z" - date ONLY is not supported/allowed with Rebble.io - unclear if Pebble supported this (None of the js code indicates this is supported). requests.exceptions.HTTPError: 400 Client Error: The pin object submitted was invalid. for url: https://timeline-api.rebble.io/v1/user/pins/2022-05-16
     layout=dict(
         type="genericPin",
         title="This is a genericPin!",
@@ -98,7 +98,7 @@ Dev Setup
 
 Working demos:
 
-  * utc_pin_demo.py - Python 3 demo
+  * utc_pin_demo.py - Python 3 demo (could be made to work with Python 2 with very little effort)
 
 Steps:
 
@@ -106,3 +106,21 @@ Steps:
 2. Generate token on Pebble, copy token from phone via app settings
 3. Set operating system environment variable `USER_TIMELINE_TOKEN` to token value, e.g. `set USER_TIMELINE_TOKEN=token` or `export USER_TIMELINE_TOKEN=token`
 4. Run demo; `python utc_pin_demo.py`
+
+Resources
+---------
+
+Thanks to the original Python timeline library author Alessio Bogon for https://github.com/youtux/pypebbleapi
+
+Also see other language implementations, including the original Pebble reference implementation in javascript/node:
+
+  * https://github.com/pebble/pebble-api-node
+      * https://www.npmjs.com/package/pebble-api
+  * https://github.com/Tizzu/RebbleMemos/blob/f36cabab120ebf721db47354bc7b024ed9201085/functions.py#L23
+  * MISSING! https://gist.github.com/pebble-gists/6a4082ef12e625d23455
+  * https://developer.rebble.io/developer.pebble.com/guides/pebble-timeline/timeline-libraries/index.html
+  * https://apps.rebble.io/en_US/application/5d9ac26dc393f54d6b5f5445
+  * https://willow.systems/pebble/timeline-tester/
+  * https://github.com/Willow-Systems/pebble-timeline-test-server
+  * https://github.com/Willow-Systems/pebble-generate-token
+  * https://github.com/Willow-Systems/ws-pebble-timeline-services/blob/5767fa574ee9eb927abd0c5812caa02fbc76cb9f/proxyServer/timelineTestProxyServer.js#L447  -- custom implemented API

@@ -6,6 +6,7 @@ pypebbleapi
 [Rebble.io / Pebble Timeline](https://developer.rebble.io/developer.pebble.com/guides/pebble-timeline/index.html) APIs for python.
 
 This is a fork of Alessio Bogon's https://github.com/youtux/pypebbleapi with support for Rebble servers to send pins to the Pebble Timeline for the Pebble smartwatch.
+It also integrates all (as of 2022-05-14) the other changes from the other forks found on GitHub.
 It has a different version number so as to avoid confusion with the (as of 2022-05) archived repo. Thanks to the Rebble.io maintainers/service timeline support is available for Pebble users! :)
 
 This is a library to ease the access to the Pebble Timeline and validate pins.

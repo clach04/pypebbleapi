@@ -12,6 +12,14 @@ It has a different version number so as to avoid confusion with the (as of 2022-
 This is a library to ease the access to the Pebble Timeline and validate pins.
 It supports Python 2.7, 3.3 and 3.4.
 
+  * [Update](#update)
+  * [Install](#install)
+  * [Usage](#usage)
+  * [Error handling](#error-handling)
+  * [Dev Setup](#dev-setup)
+    + [Working demos](#working-demos)
+  * [Resources](#resources)
+
 Update
 -----
 Starting from version *1.0.0*, the API has changed. The `Pin` class has

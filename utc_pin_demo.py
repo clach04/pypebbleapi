@@ -34,6 +34,7 @@ pin_datetime = utc_now + (60 * one_min)
 my_pin = dict(
     id=datetime2utc_isoformat(pin_datetime),
     time=datetime2utc_isoformat(pin_datetime),
+    duration=60,  # 60 mins (one hour)
     layout=dict(
         type="genericPin",
         title="MyPin",
